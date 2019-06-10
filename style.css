@@ -12,47 +12,41 @@ body {
   padding: 30px 0 197px;
   cursor: pointer;
 }
-
-.person {
+.people .person {
   display: grid;
-  grid-template-rows: 215px; 
+  grid-template-rows: 215px;
   transition: transform 1s;
   transition-delay: 1s;
 }
-
-.person:hover  {  
+.people .person:hover {
   width: 220px;
   height: 287px;
   cursor: pointer;
   background: #EEEEEE;
-  border-radius: 10px; 
+  border-radius: 10px;
   transform: scale(1.15);
   z-index: 1;
 }
-
-img {
-  display:block;  
-  margin:0 auto; 
+.people img {
+  display: block;
+  margin: 0 auto;
   padding-top: 10px;
   width: 200px;
   height: 200px;
   border-radius: 100px;
 }
-
-img {  
+.people img {
   transition: 1s;
   transition-delay: 1s;
 }
-
-img:hover {
+.people img:hover {
   border-radius: 60px;
 }
-
-.rank {
+.people .rank {
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative; 
+  position: relative;
   height: 32px;
   width: 32px;
   border-radius: 16px;
@@ -62,38 +56,34 @@ img:hover {
   bottom: 116px;
   left: 170px;
 }
-
-.details {
+.people .details {
   text-align: center;
 }
-
-.name { 
+.people .name {
   font-size: 20px;
   line-height: 23px;
   font-weight: 600;
   text-align: center;
   color: #2F4F4F;
 }
-
-.sport::after {
+.people .sport::after {
   content: ",";
 }
-
-.pay::before {
+.people .pay::before {
   content: "$";
 }
-
-.extra {
-  visibility: hidden;    
+.people .extra {
+  visibility: hidden;
   text-align: center;
   line-height: 35px;
   font-size: 18px;
   font-weight: normal;
   color: #000;
 }
-
-.person:hover .extra {
+.people .person:hover .extra {
   visibility: initial;
   display: block;
   text-align: center;
 }
+
+/*# sourceMappingURL=style.css.map */
