@@ -1,99 +1,103 @@
-* {
+body {
   margin: 0;
   padding: 0;
+  font-family: Arial, sans-serif;
 }
 
 .people {
   display: grid;
   grid-template-columns: repeat(4, 220px);
-  
-  grid-row-gap: 40px;
-  
+  grid-template-rows: repeat(3, 270px);
   justify-content: center;
   padding: 30px 0 197px;
   cursor: pointer;
 }
-.person:hover  {
-  
+
+.person {
+  display: grid;
+  grid-template-rows: 215px; 
+  transition: transform 1s;
+  transition-delay: 1s;
+}
+
+.person:hover  {  
   width: 220px;
   height: 287px;
   cursor: pointer;
   background: #EEEEEE;
   border-radius: 10px; 
-
-
+  transform: scale(1.15);
+  z-index: 1;
 }
-
-.person:hover > .extra {
-  display: unset;
-}
-
 
 img {
-  display:block;
-   margin:0 auto;
-}
-
-
-.photo >img {
+  display:block;  
+  margin:0 auto; 
+  padding-top: 10px;
   width: 200px;
   height: 200px;
   border-radius: 100px;
-  
-  
+}
+
+img {  
+  transition: 1s;
+  transition-delay: 1s;
+}
+
+img:hover {
+  border-radius: 60px;
 }
 
 .rank {
-  position: relative ;
-  width: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative; 
   height: 32px;
-  border: 1px solid#000000;
-  border-radius: 50%;
- 
-  
-
+  width: 32px;
+  border-radius: 16px;
+  color: #8B0000;
+  background: #fff;
+  font-size: 16px;
+  bottom: 116px;
+  left: 170px;
 }
 
 .details {
   text-align: center;
-  margin: auto;
-  
 }
-.name {
-  font-family: Arial;
+
+.name { 
   font-size: 20px;
   line-height: 23px;
-  
-  
+  font-weight: 600;
   text-align: center;
-  margin: auto;
-  
+  /* margin: auto;   */
   color: #2F4F4F;
 }
 
-.extra >.sport .pay {
-  font-family: Arial;
-  font-size: 18px;
-  line-height: 21px;
-
-  
-  text-align: center;
-  
-  color: #000000;
-
+.sport::after {
+  content: ",";
 }
 
 .pay::before {
-  content: "$"
-
+  content: "$";
 }
 
 .extra {
-  display: none;
+  visibility: hidden;    
+  text-align: center;
+  line-height: 35px;
+  font-size: 18px;
+  font-weight: normal;
+  color: #000;
 }
 
-
-
+.person:hover .extra {
+  visibility: initial;
+  display: block;
+  text-align: center;
+}
 
 
 
@@ -106,6 +110,7 @@ img {
   .people {
     display: grid;
     grid-template-columns: repeat(2, 220px);
+    grid-template-rows: repeat(5, 270px);
   
 }
 }
