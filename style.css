@@ -72,7 +72,6 @@ img:hover {
   line-height: 23px;
   font-weight: 600;
   text-align: center;
-  /* margin: auto;   */
   color: #2F4F4F;
 }
 
@@ -97,20 +96,4 @@ img:hover {
   visibility: initial;
   display: block;
   text-align: center;
-}
-
-
-
-
-
-/* MEDIA */
-
-
-@media screen and (max-width:999px) {
-  .people {
-    display: grid;
-    grid-template-columns: repeat(2, 220px);
-    grid-template-rows: repeat(5, 270px);
-  
-}
 }
